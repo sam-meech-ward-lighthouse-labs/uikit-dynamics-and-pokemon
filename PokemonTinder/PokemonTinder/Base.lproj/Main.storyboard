@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Ez-zR-bWb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="charmander" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-Jt-2sO">
+                                <rect key="frame" x="46" y="87" width="322" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="T7X-EF-JVw" appends="YES" id="K06-wr-2BA"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MMx-Bx-qPV" appends="YES" id="7JF-ei-4kQ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="yq7-Jt-2sO" id="XaX-5R-Yrm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MMx-Bx-qPV">
+                    <connections>
+                        <action selector="tappedScreen:" destination="BYZ-38-t0r" id="Wt6-vW-Tor"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="T7X-EF-JVw">
+                    <connections>
+                        <action selector="panImageView:" destination="BYZ-38-t0r" id="909-At-nbu"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-38" y="120"/>
+        </scene>
+        <!--Auto Layout View Controller-->
+        <scene sceneID="Anb-gV-Fxj">
+            <objects>
+                <viewController id="3Ez-zR-bWb" customClass="AutoLayoutViewController" customModule="PokemonTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QhA-mF-Xdb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charmander" translatesAutoresizingMaskIntoConstraints="NO" id="sz8-We-UCc">
+                                <rect key="frame" x="46" y="90" width="322" height="322"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sz8-We-UCc" secondAttribute="height" id="lmp-4d-vYq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YIT-8o-1iV" firstAttribute="trailing" secondItem="sz8-We-UCc" secondAttribute="trailing" constant="46" id="2Ne-3Q-rvh"/>
+                            <constraint firstItem="sz8-We-UCc" firstAttribute="leading" secondItem="YIT-8o-1iV" secondAttribute="leading" constant="46" id="82E-PB-hPw"/>
+                            <constraint firstItem="sz8-We-UCc" firstAttribute="top" secondItem="YIT-8o-1iV" secondAttribute="top" constant="46" id="WUP-4U-ajR"/>
+                            <constraint firstItem="sz8-We-UCc" firstAttribute="centerY" secondItem="QhA-mF-Xdb" secondAttribute="centerY" id="wLj-Og-qPN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YIT-8o-1iV"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wLj-Og-qPN"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8ab-Bj-p7D" appends="YES" id="N18-mr-4mb"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="centerConstraint" destination="wLj-Og-qPN" id="AKg-P5-Tm5"/>
+                        <outlet property="imageView" destination="sz8-We-UCc" id="5bc-Fr-iuw"/>
+                        <outlet property="topConstraints" destination="WUP-4U-ajR" id="AgA-nO-ygM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vI4-aI-Bpb" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8ab-Bj-p7D">
+                    <connections>
+                        <action selector="tappedScreen:" destination="3Ez-zR-bWb" id="6Pt-W6-Rvm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="841" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="charmander" width="211" height="239"/>
+    </resources>
+</document>
